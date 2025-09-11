@@ -1,170 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Hospital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      background: #0073e6;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #005bb5;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      display: block;
-    }
-    nav a:hover {
-      background: #003f7f;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    #hero {
-      background: url('https://source.unsplash.com/1600x600/?hospital') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    #hero h2 {
-      font-size: 2.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    /* Responsive nav */
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        text-align: center;
-      }
-    }
-  </style>
+  <title>Tahiria Hospital - north 24 Parganas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>ABC Hospital</h1>
-    <p>Your Health, Our Priority</p>
+    <nav class="navbar">
+      <div class="logo">🏥 Tahiria Hospital</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">হোম</a></li>
+        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+        <li><a href="#services">সার্ভিস</a></li>
+        <li><a href="#doctors">ডাক্তার</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+        <li><a href="#policy">Privacy Policy</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#doctors">Doctors</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <!-- Hero Section -->
-  <section id="hero">
-    <h2>Welcome to ABC Hospital</h2>
-    <p>Providing world-class healthcare with compassion.</p>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Tahiria Hospital</h1>
+      <p>উত্তর ২৪ পরগনার অন্যতম সেরা আধুনিক হাসপাতাল</p>
+      <p><strong>Principal:</strong> ডা. মাহমুদ হাসান</p>
+      <a href="#contact" class="btn">Appointment Book করুন</a>
+    </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>ABC Hospital is one of the leading healthcare providers in our region, offering advanced treatments, modern facilities, and experienced doctors dedicated to patient care.</p>
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>আমাদের সম্পর্কে</h2>
+    <p>Tahiria Hospital আধুনিক চিকিৎসা প্রযুক্তি, দক্ষ ডাক্তার এবং ২৪/৭ ইমার্জেন্সি সেবার মাধ্যমে স্থানীয় ও আশেপাশের এলাকায় রোগীদের মানসম্মত স্বাস্থ্যসেবা প্রদান করে আসছে।</p>
+    <p><strong>Location:</strong> Tahiria Hospital, Basirhat, Uttar 24 Parganas, West Bengal</p>
   </section>
 
-  <!-- Doctors Section -->
-  <section id="doctors">
-    <h2>Our Doctors</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?doctor" alt="Doctor">
-        <h3>Dr. Rahman</h3>
-        <p>Cardiologist</p>
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>আমাদের সার্ভিস</h2>
+    <div class="service-container">
+      <div class="service-card">
+        <h3>Emergency Care</h3>
+        <p>২৪ ঘণ্টা জরুরি চিকিৎসা সেবা।</p>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?doctor,medicine" alt="Doctor">
-        <h3>Dr. Sen</h3>
+      <div class="service-card">
+        <h3>Diagnostics & Lab</h3>
+        <p>আধুনিক ল্যাব, এক্সরে, এমআরআই, সিটি স্ক্যান সুবিধা।</p>
+      </div>
+      <div class="service-card">
+        <h3>Surgery</h3>
+        <p>অভিজ্ঞ সার্জন দ্বারা বিভিন্ন ধরনের অপারেশন।</p>
+      </div>
+      <div class="service-card">
+        <h3>Maternity Care</h3>
+        <p>সুরক্ষিত মাতৃত্ব ও শিশু চিকিৎসা সেবা।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors" class="doctors">
+    <h2>আমাদের ডাক্তার</h2>
+    <div class="doctor-container">
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/200" alt="Doctor">
+        <h3>ডা. মাহমুদ হাসান</h3>
+        <p>Principal & Cardiologist</p>
+      </div>
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/200" alt="Doctor">
+        <h3>ডা. সুলতানা রহমান</h3>
+        <p>Gynecologist</p>
+      </div>
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/200" alt="Doctor">
+        <h3>ডা. আরিফুল ইসলাম</h3>
         <p>Neurologist</p>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?surgeon" alt="Doctor">
-        <h3>Dr. Khan</h3>
-        <p>Orthopedic Surgeon</p>
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/200" alt="Doctor">
+        <h3>ডা. ফাতিমা ইয়াসমিন</h3>
+        <p>Pediatrician</p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Emergency Care</h3>
-        <p>24/7 emergency and ambulance support.</p>
-      </div>
-      <div class="card">
-        <h3>Diagnostics</h3>
-        <p>Modern lab facilities and radiology.</p>
-      </div>
-      <div class="card">
-        <h3>Pharmacy</h3>
-        <p>In-house pharmacy with all essential medicines.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> 123 Main Street, Kolkata, India</p>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>যোগাযোগ করুন</h2>
+    <form>
+      <input type="text" placeholder="আপনার নাম" required>
+      <input type="email" placeholder="আপনার ইমেইল" required>
+      <textarea placeholder="আপনার মেসেজ" required></textarea>
+      <button type="submit" class="btn">পাঠান</button>
+    </form>
+    <p><strong>Address:</strong> Basirhat, Uttar 24 Parganas, West Bengal</p>
     <p><strong>Phone:</strong> +91 98765 43210</p>
-    <p><strong>Email:</strong> info@abchospital.com</p>
-    <iframe src="https://maps.google.com/maps?q=kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p><strong>Email:</strong> info@tahiriahospital.com</p>
+  </section>
+
+  <!-- Privacy Policy -->
+  <section id="policy" class="policy">
+    <h2>Privacy Policy</h2>
+    <p>আমরা আপনার ব্যক্তিগত তথ্যের সুরক্ষাকে সর্বোচ্চ গুরুত্ব দিই। রোগীর তথ্য শুধুমাত্র চিকিৎসার উদ্দেশ্যে ব্যবহৃত হয়।</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 ABC Hospital. All Rights Reserved.</p>
+    <p>&copy; 2025 Tahiria Hospital | All Rights Reserved</p>
+    <div class="social">
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
