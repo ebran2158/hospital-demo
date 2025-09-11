@@ -1,4 +1,5 @@
-// Navbar toggle
+// Navbar toggle for mobile view
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
 }
